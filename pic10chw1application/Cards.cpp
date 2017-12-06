@@ -205,7 +205,7 @@ void Hand::update_hand(int i) {
 double Hand::get_sum_of_value() const {
 	int i;
 	double sum = 0;
-	for (i = 1; i < rank_of_cards.size(); i++)
+	for (i = 0; i < rank_of_cards.size(); i++)
 	{
 		if (this->rank_of_cards[i] >= 10)
 			sum = sum + 0.5;
@@ -216,9 +216,9 @@ double Hand::get_sum_of_value() const {
 }
 
 void Hand::print_ranks_of_cards() const {
-	for (int i = 0; i++; i<rank_of_cards.size())
-		cout << rank_of_cards[i];
-	cout << endl;
+	for (int i = 0; i<rank_of_cards.size();i++)
+		cout << rank_of_cards[i]<<" ";
+	cout << "\n";
 }
 
 /* *************************************************
